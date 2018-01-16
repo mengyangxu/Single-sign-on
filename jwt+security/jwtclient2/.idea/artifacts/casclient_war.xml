@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="casclient:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="casclient.war">
+      <element id="artifact" artifact-name="casclient:war exploded" />
+    </root>
+  </artifact>
+</component>

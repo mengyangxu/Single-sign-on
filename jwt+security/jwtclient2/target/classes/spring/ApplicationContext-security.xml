@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:sec="http://www.springframework.org/schema/security"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd"
+	   default-lazy-init="true">
+
+
+	<!-- 浏览权限设定，根据自己的情况修改 -->
+	<sec:http security="none" pattern="/index.html"/>
+	<sec:http security="none" pattern="/error.html"/>
+	<sec:http security="none" pattern="/exit"/>
+
+
+	<sec:http auto-config="true">
+		<sec:headers disabled="true"/>
+		<sec:csrf disabled="true"/>
+        <sec:form-login />
+
+        <sec:intercept-url pattern="/index2.html" access="hasRole('ROLE_USER')"/>
+		<sec:intercept-url pattern="/log" access="hasRole('ROLE_USER')"/>
+
+        <sec:custom-filter  ref="loginFilter" before="FORM_LOGIN_FILTER"/>
+        <sec:custom-filter  ref="jwtAuthenticaionFilter" after="CAS_FILTER"/>
+		<sec:logout logout-success-url="/static/html/logout-success.html"/>
+
+
+
+	</sec:http>
+
+
+
+
+    <bean id="loginFilter" class="com.csh.filter.JWTLoginFilter">
+        <constructor-arg name="authenticationManager" ref="authenticationManager"/>
+
+        <property name="authenticationManager"  ref="authenticationManager"></property>
+        <property name="authenticationSuccessHandler">
+            <bean class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+                <property name="defaultTargetUrl" value="/index.jsp"></property>
+            </bean>
+        </property>
+        <property name="authenticationFailureHandler">
+            <bean class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+                <property name="defaultFailureUrl" value="/login.jsp"></property>
+            </bean>
+        </property>
+    </bean>
+
+
+
+
+
+    <sec:authentication-manager alias="authenticationManager">
+		<sec:authentication-provider ref="CustomAuthenticationProvider"/>
+	</sec:authentication-manager>
+
+    <bean id="CustomAuthenticationProvider" class="com.csh.entity.CustomAuthenticationProvider">
+        <constructor-arg name="userDetailsService" ref="userService"/>
+    </bean>
+
+	<bean id="jwtAuthenticaionFilter" class="com.csh.filter.JwtAuthenticationFilter">
+		<constructor-arg name="authenticationManager" ref="authenticationManager"/>
+	</bean>
+
+
+
+
+	<!--自己的服务，用户名和密码，以及角色-->
+	<sec:user-service id="userService">
+		<sec:user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN" />
+		<sec:user name="user" password="user" authorities="ROLE_USER" />
+		<sec:user name="hellosso" password="hellosso" authorities="ROLE_USER" />
+	</sec:user-service>
+	<!-- jdbc-->
+	<sec:jdbc-user-service id="jdbcUserService" data-source-ref="dataSource"
+						   users-by-username-query="select  username,password ,enabled from user where username=?"
+						   authorities-by-username-query="select u.username as username,r.name as authority from  user u, role r, role_user ur where u.id=ur.user_id and r.id=ur.role_id and u.username=?"/>
+
+
+
+
+
+</beans>

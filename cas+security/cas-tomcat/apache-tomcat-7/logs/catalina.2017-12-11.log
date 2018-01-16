@@ -1,0 +1,74 @@
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server version:        Apache Tomcat/7.0.82
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server built:          Sep 29 2017 12:23:15 UTC
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server number:         7.0.82.0
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Name:               Windows 10
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Version:            10.0
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Architecture:          x86
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Java Home:             C:\Program Files (x86)\Java\jdk1.8.0_144\jre
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Version:           1.8.0_144-b01
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Vendor:            Oracle Corporation
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_BASE:         D:\Program Files\apache-tomcat-7.0.82
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_HOME:         D:\Program Files\apache-tomcat-7.0.82
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.config.file=D:\Program Files\apache-tomcat-7.0.82\conf\logging.properties
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.endorsed.dirs=D:\Program Files\apache-tomcat-7.0.82\endorsed
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.base=D:\Program Files\apache-tomcat-7.0.82
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.home=D:\Program Files\apache-tomcat-7.0.82
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.io.tmpdir=D:\Program Files\apache-tomcat-7.0.82\temp
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.8.0_144\bin;F:\sdk\platform-tools;F:\sdk\tools;F:\Python;F:\Python\Scripts;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Java\jdk1.8.0_144\jre\bin;C:\Program Files (x86)\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files (x86)\Java\jdk1.8.0_144\lib\tools.jar;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.
+十二月 11, 2017 4:14:02 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8080"]
+十二月 11, 2017 4:14:02 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 477 ms
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.82
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\docs
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\docs has finished in 252 ms
+十二月 11, 2017 4:14:02 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\examples
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\examples has finished in 508 ms
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\host-manager
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\host-manager has finished in 133 ms
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\manager
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\manager has finished in 53 ms
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\ROOT
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\Program Files\apache-tomcat-7.0.82\webapps\ROOT has finished in 32 ms
+十二月 11, 2017 4:14:03 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8080"]
+十二月 11, 2017 4:14:03 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+十二月 11, 2017 4:14:03 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1036 ms

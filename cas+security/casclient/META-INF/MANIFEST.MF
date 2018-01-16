@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Jasig
+Implementation-Title: Jasig CAS Client for Java - Core
+Implementation-Version: 3.3.3
+Implementation-Vendor-Id: org.jasig.cas.client
+Built-By: marvin
+Build-Jdk: 1.7.0_55
+Specification-Vendor: Jasig
+Specification-Title: Jasig CAS Client for Java - Core
+Created-By: Apache Maven 3.2.1
+Specification-Version: 3.3.3
+Archiver-Version: Plexus Archiver
+
